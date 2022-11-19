@@ -45,3 +45,17 @@ exports.updateUser = (req, res) => {
         users
     })
 }
+
+
+exports.deleteUser = (req, res) => {
+    const { id } = req.params;
+
+    const filteredUser = users.filter(user => user.id !== id);
+
+
+    res.status(200).json({
+        success: true,
+        message: "Successfully delete the user",
+        users: filteredUser
+    })
+}

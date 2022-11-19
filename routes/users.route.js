@@ -8,5 +8,6 @@ router.route("/")
 
 router.route("/:id")
     .put(usersController.updateUser)
+    .delete(usersController.deleteUser)
 
 module.exports = router;
